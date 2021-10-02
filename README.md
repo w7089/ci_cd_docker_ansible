@@ -2,7 +2,7 @@
 
 - build base image
 
-`docker build -t w7089/todobackend-base todobackend-base`
+`docker build -t warrior7089/todobackend-base todobackend-base`
 
 - build dev image
 

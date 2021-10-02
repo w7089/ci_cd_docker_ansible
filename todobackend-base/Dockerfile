@@ -1,8 +1,10 @@
-FROM python:3.7
+FROM python:2.7
 
 # Create virtual environment
-RUN python3.7 -m venv /appenv 
-
+RUN virtualenv /appenv && \
+    . /appenv/bin/activate && \
+    pip install pip --upgrade
+    
 # Add entrypoint script
 ADD scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
